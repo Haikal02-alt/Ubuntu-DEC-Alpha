@@ -2,4 +2,5 @@
 
 # Ubuntu DEC Alpha
 This is a port of Ubuntu base + pickings for DEC Alpha
+
 The alpha architecture was developed by Digital Equipment Corporation (DEC) and later Compaq 1992-2004.
