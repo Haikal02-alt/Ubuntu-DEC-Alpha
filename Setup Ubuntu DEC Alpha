@@ -1,0 +1,27 @@
+1 Download ISO From Debian 5.0 DEC Alpha https://cdimage.debian.org/mirror/cdimage/archive/5.0.10/alpha/iso-cd/ Then Select CD-1.iso
+2 Then Flash ISO
+3 Setup Debian 5.0 DEC Alpha
+4 When On Tasksel Select Desktop Environment Which Debian And Ubuntu Uses GNOME
+5 Open root terminal then cd then nano /etc/apt/sources.list
+  Then remove Line commented out by installler because it failed to verify then Replace with Archive Entries
+
+  deb http://archive.debian.org/debian/ lenny main contrib non-free
+  deb-src http://archive.debian.org/debian/ lenny main contrib non-free
+
+  deb http://archive.debian.org/debian-security/ lenny/updates main contrib non-free
+  deb-src http://archive.debian.org/debian-security/ lenny/updates main contrib non-free
+
+  Ctrl x y enter then apt-get update
+
+6 Run nano /etc/sudoers then add yourusername  ALL=(ALL) ALL under root  ALL=(ALL) ALL
+  Ctrl x y enter then exit root terminal then open normal terminal then run sudo apt-get update && sudo apt-get upgrade
+7 Run sound preferences then Enable software sound mixing then play system sounds then sudo apt-get install gnome-audio
+8 Go to appearance preferences then Remove Moreblue Orbit
+9 Run sudo nano /etc/debian_version then change 5.0.10 To 8.04 LTS
+10 Run sudo nano /etc/issue Then change Debian GNU/Linux 5.0 \n \l to Ubuntu 8.04 LTS \n \l Then Run sudo nano /etc/issue.net Then change Debian GNU/Linux 5.0 to Ubuntu 8.04 LTS
+11 Run sudo apt-get install splashy splashy-themes then sudo nano /boot/grub/menu.lst then change timeout=5 to timeout=0 Then Change every name from End Default Options Debian GNU/Linux To Ubuntu even recovery mode
+   Then on kernel /boot/vmlinuz-2.6.26-2-686 root=/dev/hda1 ro add quiet splash vga=791 then ctrl x y enter then sudo splashy_config --set-theme ubuntusplashy then sudo update-initramfs -u
+12 On GDM open options then Configure login manager then select Happy GNOME
+13 Run sudo apt-get install esound
+14 Run sudo apt-get install gtk2-engines-ubuntulooks then sudo apt-get install human-icon-theme then go to Appearance Preferences Then Controls Then change Clearlooks To Human open icons Then change Clearlook To Human
+15 Run sudo apt-get install pulseaudio
